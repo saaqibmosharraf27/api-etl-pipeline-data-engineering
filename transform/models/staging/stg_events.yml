@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: "Cleaned and typed events from the raw API ingestion."
+    columns:
+      - name: event_id
+        description: "Business key from the source system."
+        tests:
+          - not_null
+          - unique
+      - name: status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["active", "inactive", "pending"]
+      - name: amount
+        tests:
+          - not_null

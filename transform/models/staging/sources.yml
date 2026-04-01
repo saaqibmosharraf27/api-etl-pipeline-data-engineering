@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: events
+        description: "Raw JSON payloads ingested from the source API."
+        columns:
+          - name: id
+            description: "Auto-incremented surrogate key."
+          - name: payload
+            description: "Full JSON record as returned by the API."
+          - name: ingested_at
+            description: "UTC timestamp when the row was inserted."

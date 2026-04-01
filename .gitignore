@@ -1,0 +1,7 @@
+.env
+data/
+transform/target/
+transform/dbt_packages/
+__pycache__/
+*.pyc
+.pytest_cache/

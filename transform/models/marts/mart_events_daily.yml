@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: mart_events_daily
+    description: "Daily event counts and amounts by status, for dashboards and reports."
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+      - name: status
+        tests:
+          - not_null
+      - name: event_count
+        tests:
+          - not_null
